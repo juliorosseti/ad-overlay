@@ -1,0 +1,55 @@
+@import url('./fx.css');
+
+body {
+    font-family: 'Exo', sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.banner {
+    height: 10rem;
+    width: 35rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 4px 0px;
+    margin-bottom: 15px;
+
+    -webkit-transition: background 500ms ease-in-out;
+    -ms-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+}
+
+.banner .logo {
+    /* height: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 76%;
+    width: 10rem;
+    margin: 0px 20px;
+}
+
+.banner .logo img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.banner .separator {
+    height: 80%;
+    width: 0.3rem;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.banner .texts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 4rem;
+    margin: 0px 4px;
+    width: 60%;
+    color: white;
+    font-size: 34px;
+    /* text-shadow: 0px 0px 2px #000; */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Banners stream</title>
+</head>
+
+<body>
+    <div id="app">
+        <transition name="fade">
+            <div class="banner" :style="currentBanner.background" v-if="isVisibleBanner">
+                <div class="logo">
+                    <transition name="fade">
+                        <img v-if="isVisibleLogo" :src="currentBanner.img" />
+                    </transition>
+                </div>
+                <div class="separator"></div>
+                <div class="texts">
+                    <transition name="slide-fade">
+                        <span v-if="isVisibleText" :style="`color: ${currentBanner.colorText}`"
+                            v-html="currentBanner.dynamicText[0]">
+                        </span>
+                    </transition>
+                </div>
+            </div>
+        </transition>
+    </div>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/banners.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
